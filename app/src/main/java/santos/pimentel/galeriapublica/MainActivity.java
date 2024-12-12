@@ -80,4 +80,20 @@ public class MainActivity extends AppCompatActivity {
         permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
         checkForPermissions(permissions);
     }
+
+    private void checkForPermissions(List<String> permissions) {
+        List<String> permissionsNotGranted = new ArrayList<>();
+
+        if (permissionsNotGranted.size() > 0) {
+
+        } else {
+            MainViewModel vm = new ViewModelProvider(this).get(MainViewModel.class);
+            int navigationOpSelected = vm.getNavigationOpSelected();
+            bottomNavigationView.setSelectedItemId(navigationOpSelected);
+        }
+
+
+
+
+    }
 }
