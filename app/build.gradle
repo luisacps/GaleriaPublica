@@ -29,7 +29,10 @@ android {
 }
 
 dependencies {
-
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    def paging_version = "3.1.1"
+    implementation "androidx.paging:paging-guava:$paging_version"
+    implementation "androidx.paging:paging-runtime:$paging_version"
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
