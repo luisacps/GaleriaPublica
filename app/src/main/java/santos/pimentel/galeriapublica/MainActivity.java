@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        List<String> permissions = new ArrayList<>();
+        permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        checkForPermissions(permissions);
+
         final MainViewModel vm = new ViewModelProvider(this).get(MainViewModel.class);
 
         bottomNavigationView = findViewById(R.id.btNav);
@@ -54,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        List<String> permissions = new ArrayList<>();
-        permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-        checkForPermissions(permissions);
     }
 
     private void checkForPermissions(List<String> permissions) {

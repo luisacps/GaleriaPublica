@@ -27,7 +27,7 @@ public class GridAdapter extends PagingDataAdapter<ImageData, MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ImageData imageData = getItem(position);
         Bitmap thumb = imageData.thumb;
-        ImageView imageView = holder.itemView.findViewById(R.id.imThumb);
+        ImageView imageView = holder.itemView.findViewById(R.id.imgThumb);
         imageView.setImageBitmap(thumb);
 
 

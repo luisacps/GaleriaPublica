@@ -14,8 +14,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-public class Util {
 
+public class Util {
     /**
      * Calcula o numero de colunas que cabem na tela ao usar o tipo de
      * visualizacao GRID no RecycleView
@@ -254,5 +254,4 @@ public class Util {
         byte[] imageAsBytes = Base64.decode(myImageData.getBytes(),Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
     }
-
 }
